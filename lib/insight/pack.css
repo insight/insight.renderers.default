@@ -342,54 +342,75 @@ DIV.__NS__console-message-group[expanded=true] {
     background-color: #77CDD9;
 }
 
-DIV.__NS__console-message > DIV.title {
-    padding-left: 4px;
-    padding-right: 4px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    display: block;
+DIV.__NS__console-message > DIV.header {
     position: relative;
+    padding-left: 34px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 4px;
+    cursor: pointer;
 }
-DIV.__NS__console-message[expanded=false] > DIV.title:hover {
+
+DIV.__NS__console-message[expanded=true] > DIV.header {
+    text-align: right;
+    min-height: 16px;
+}
+
+DIV.__NS__console-message[expanded=false] > DIV.header:hover {
     background-color: #ffc73d;
-    cursor: pointer;
 }
 
-DIV.__NS__console-message > DIV.title:hover {
-    cursor: pointer;
-}
-
-DIV.__NS__console-message-group > DIV.title {
+DIV.__NS__console-message-group > DIV.header {
     background: url(__RESOURCE__images/document-page-next.png) no-repeat;
     background-position: 2px 3px;
-    padding-left: 20px;
     font-weight: bold;
     background-color: #77CDD9;
 }
 
-DIV.__NS__console-message > DIV.title-priority-info {
+DIV.__NS__console-message > DIV.header-priority-info {
     background: url(__RESOURCE__images/information.png) no-repeat;
     background-position: 2px 3px;
-    padding-left: 20px;
     background-color: #c6eeff;
 }
 
-DIV.__NS__console-message > DIV.title-priority-warn {
+DIV.__NS__console-message > DIV.header-priority-warn {
     background: url(__RESOURCE__images/exclamation-diamond.png) no-repeat;
     background-position: 2px 3px;
-    padding-left: 20px;
     background-color: #ffe68d;
 }
 
-DIV.__NS__console-message > DIV.title-priority-error {
+DIV.__NS__console-message > DIV.header-priority-error {
     background: url(__RESOURCE__images/exclamation-red.png) no-repeat;
     background-position: 2px 3px;
-    padding-left: 20px;
     background-color: #ffa7a7;
 }
 
-DIV.__NS__console-message > DIV.title > SPAN > DIV.label {
+DIV.__NS__console-message > DIV.header > DIV.expander {
+    background-color: black;
+    width: 18px;
+    height: 18px;
     display: inline-block;
+    float: left;
+    position: relative;
+    top: -1px;
+    margin-left: -14px;
+}
+
+DIV.__NS__console-message > DIV.header > DIV.expander:hover {
+    cursor: pointer;
+}
+
+DIV.__NS__console-message[expanded=false] > DIV.header > DIV.expander {
+    background: url(__RESOURCE__images/plus-small-white.png) no-repeat;
+    background-position: 0px 1px;
+}
+
+DIV.__NS__console-message[expanded=true] > DIV.header > DIV.expander {
+    background: url(__RESOURCE__images/minus-small-white.png) no-repeat;
+    background-position: 0px 1px;
+}
+
+DIV.__NS__console-message > DIV.header > SPAN.summary > SPAN.label > SPAN {
     margin-right: 5px;
     background-color: rgba(69,68,60,1);
     padding-left: 5px;
@@ -399,83 +420,47 @@ DIV.__NS__console-message > DIV.title > SPAN > DIV.label {
     margin-top: 1px;
 }
 
-DIV.__NS__console-message > DIV.title > DIV.expander {
-    width: 18px;
-    height: 16px;
-    display: inline-block;
-    padding-right: 1px;
-    vertical-align: top;
-}
-
-DIV.__NS__console-message[expanded=false] > DIV > DIV.expander {
-    background: url(__RESOURCE__images/plus-small-white.png) no-repeat;
-    background-position: 0px 1px;
-}
-
-DIV.__NS__console-message[expanded=true] > DIV > DIV.expander {
-    background: url(__RESOURCE__images/minus-small-white.png) no-repeat;
-    background-position: 0px 1px;
-}
-
-DIV.__NS__console-message > DIV.title > DIV.expander:hover {
-    cursor: pointer;
-}
-
-DIV.__NS__console-message > DIV.title > DIV.value {
-    display: inline-block;
-    padding-top: 0px;
-}
-
-DIV.__NS__console-message[expanded=true] > DIV.title[hideOnExpand=true] SPAN.value {
-    display: none;
-}
-
-DIV.__NS__console-message > DIV.title DIV.fileline {
-    display: none;
-    overflow-x: hidden;
-    white-space: nowrap;
-    width: 500px;
-    text-align: right;
-    padding-top: 0px;
+DIV.__NS__console-message > DIV.header > SPAN.fileline {
     color: #8c8c8c;
-    padding-right: 10px;
-    position: relative;
-    padding-left: 25px;
-    padding-right: 45px;
-    top: -18px;
-    width: 100%;
+    word-wrap: break-word;
 }
 
-DIV.__NS__console-message > DIV.title DIV.fileline > DIV {
-    white-space: nowrap;
-    overflow: hidden;
+DIV.__NS__console-message[expanded=true] > DIV.header > SPAN.summary {
+    /* NOTE: This does not work in Google Chrome! */
+    display: none;
 }
 
-DIV.__NS__console-message[expanded=true] > DIV.title[hideOnExpand=true] DIV.fileline {
+DIV.__NS__console-message[expanded=false] > DIV.header > SPAN.fileline {
+    display: none;
+}
+
+DIV.__NS__console-message > DIV.header > DIV.actions {
     display: inline-block;
-}
-
-DIV.__NS__console-message DIV.actions {
+    position: relative;
+    top: 0px;
+    left: 10px;
     float: right;
+    margin-left: 0px;
+    margin-right: 5px;
 }
 
-DIV.__NS__console-message DIV.actions DIV.inspect {
+DIV.__NS__console-message > DIV.header > DIV.actions DIV.inspect {
     display: inline-block;
     background: url(__RESOURCE__images/node-magnifier.png) no-repeat;
     width: 16px;
     height: 16px;
-    padding-right: 5px;
+    margin-right: 4px;
 }
-DIV.__NS__console-message DIV.actions DIV.file {
+DIV.__NS__console-message > DIV.header > DIV.actions > DIV.file {
     display: inline-block;
     background: url(__RESOURCE__images/document-binary.png) no-repeat;
     width: 16px;
     height: 16px;
-    padding-right: 5px;
+    margin-right: 4px;
 }
 
-DIV.__NS__console-message DIV.actions DIV.inspect:hover,
-DIV.__NS__console-message DIV.actions DIV.file:hover {
+DIV.__NS__console-message > DIV.header > DIV.actions > DIV.inspect:hover,
+DIV.__NS__console-message > DIV.header > DIV.actions > DIV.file:hover {
     cursor: pointer;
 }
 
@@ -487,10 +472,6 @@ DIV.__NS__console-message > DIV.body {
 
 DIV.__NS__console-message[expanded=false] > DIV.body {
     display: none;
-}
-
-DIV.__NS__console-message[expanded=true] > DIV.body {
-    display: block;
 }
 
 DIV.__NS__console-message-group > DIV.body {
@@ -528,7 +509,6 @@ DIV.__NS__console-message > DIV.body > DIV.group-no-messages {
     padding-bottom: 3px;
     color: gray;
 }
-
 
 DIV.__NS__console-message .hidden {
     display: none !important;
