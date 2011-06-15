@@ -198,6 +198,13 @@ DIV.__NS__structures-trace TABLE {
   border-bottom: 1px solid #D7D7D7;
 }
 
+DIV.__NS__structures-trace TABLE TBODY TR TH,
+DIV.__NS__structures-trace TABLE TBODY TR TD {
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 DIV.__NS__structures-trace TABLE TBODY TR TH.header-file {
   white-space:nowrap;
   font-weight: bold;
@@ -212,13 +219,11 @@ DIV.__NS__structures-trace TABLE TBODY TR TH.header-line {
 DIV.__NS__structures-trace TABLE TBODY TR TH.header-inst {
   white-space:nowrap;
   font-weight: bold;
-  padding-left: 10px;
   text-align: left;
 }
 
 DIV.__NS__structures-trace TABLE TBODY TR TD.cell-file {
   vertical-align: top;
-  padding-right: 10px;
   border: 1px solid #D7D7D7;
   border-bottom: 0px;
   border-right: 0px;
@@ -282,6 +287,10 @@ DIV.__NS__structures-table TABLE {
   border-right: 1px solid #D7D7D7;
 }
 
+DIV.__NS__structures-table TABLE TBODY TR.hide {
+  display: none;
+}
+
 DIV.__NS__structures-table TABLE TBODY TR TH.header {
   vertical-align: top;
   font-weight: bold;
@@ -290,6 +299,7 @@ DIV.__NS__structures-table TABLE TBODY TR TH.header {
   border-bottom: 0px;
   border-right: 0px;
   background-color: #ececec;
+  padding: 2px;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -300,6 +310,7 @@ DIV.__NS__structures-table TABLE TBODY TR TD.cell {
   border: 1px solid #D7D7D7;
   border-bottom: 0px;
   border-right: 0px;
+  padding: 2px;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -410,7 +421,8 @@ DIV.__NS__console-message[expanded=true] > DIV.header > DIV.expander {
     background-position: 0px 1px;
 }
 
-DIV.__NS__console-message > DIV.header > SPAN.summary > SPAN.label > SPAN {
+DIV.__NS__console-message > DIV.header > SPAN.summary > SPAN.label > SPAN,
+DIV.__NS__console-message > DIV.header > SPAN.fileline > DIV > DIV.label {
     margin-right: 5px;
     background-color: rgba(69,68,60,1);
     padding-left: 5px;
@@ -418,6 +430,14 @@ DIV.__NS__console-message > DIV.header > SPAN.summary > SPAN.label > SPAN {
     color: white;
     vertical-align: top;
     margin-top: 1px;
+}
+DIV.__NS__console-message > DIV.header > SPAN.fileline > DIV > DIV.label {
+    float: left;
+    margin-top: 0px;
+}
+
+DIV.__NS__console-message > DIV.header > SPAN.summary > SPAN > SPAN.count {
+    color: #8c8c8c;
 }
 
 DIV.__NS__console-message > DIV.header > SPAN.fileline {
@@ -429,6 +449,26 @@ DIV.__NS__console-message[expanded=true] > DIV.header > SPAN.summary {
     /* NOTE: This does not work in Google Chrome! */
     display: none;
 }
+
+DIV.__NS__console-message[keeptitle=true] > DIV.header,
+DIV.__NS__console-message-group > DIV.header {
+    text-align: left !important;
+}
+DIV.__NS__console-message[keeptitle=true] > DIV.header > SPAN.fileline,
+DIV.__NS__console-message-group > DIV.header > SPAN.fileline {
+    display: none !important;
+}
+DIV.__NS__console-message[keeptitle=true] > DIV.header > SPAN.summary,
+DIV.__NS__console-message-group > DIV.header > SPAN.summary {
+    display: inline !important;
+}
+DIV.__NS__console-message-group > DIV.header > DIV.actions {
+    display: none !important;
+}
+DIV.__NS__console-message-group > DIV.header > SPAN.summary > SPAN > SPAN.count {
+    color: #ffffff !important;
+}
+
 
 DIV.__NS__console-message[expanded=false] > DIV.header > SPAN.fileline {
     display: none;
@@ -523,4 +563,31 @@ DIV.__NS__viewer-harness {
     padding: 2px 4px 1px 6px;
     font-family: Lucida Grande, Tahoma, sans-serif;
     font-size: 11px;
+}
+
+
+/*######################################################################
+#   firebug console
+#####################################################################*/
+
+DIV.devcomp-request-group {
+  background: url(__RESOURCE__images/firebug_request_group_bg.png) repeat-x #FFFFFF;
+}
+
+DIV.devcomp-request-group > DIV.logGroupLabel {
+  min-height: 16px !important;
+  background: url(__RESOURCE__images/devcomp_16.png) !important;
+  background-repeat: no-repeat !important;
+  background-position: 3px 1px !important;
+  padding-left: 24px !important;
+}
+
+DIV.devcomp-request-group > DIV.logGroupLabel > SPAN.objectBox {
+  color: #445777;
+  font-family: Lucida Grande, Tahoma, sans-serif;
+  font-size: 11px;
+}
+
+DIV.devcomp-request-group > DIV.logGroupBody > DIV > DIV.title > DIV.actions > DIV {
+    display: none !important;
 }
