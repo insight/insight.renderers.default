@@ -25,7 +25,7 @@
     ],
     "mappings": {
         "domplate": {
-            "id": "registry.pinf.org/cadorn.org/github/domplate/"
+            "id": "github.com/cadorn/domplate/"
         }
     }
 }
