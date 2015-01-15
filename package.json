@@ -1,31 +1,21 @@
 {
-    "uid": "https://github.com/pinf/insight-renderer-templates/",
-    "name": "insight-renderer-templates",
-    "label": "Insight Templates",
-    "description": "JavaScript templates for the Insight Intelligence Library",
-    "homepage": "https://github.com/pinf/insight-renderer-templates",
-    "repositories": [
-        {
-            "type": "git",
-            "url": "git://github.com/pinf/insight-renderer-templates.git"
-        }
-    ],
-    "maintainers": [
-        {
-            "name": "Christoph Dorn",
-            "email": "christoph@christophdorn.com",
-            "web": "http://www.christophdorn.com/"
-        }
-    ],
-    "licenses": [
-        {
-            "type": "MIT",
-            "url": "http://www.opensource.org/licenses/mit-license.php"
-        }
-    ],
+    "uid": "https://github.com/insight/insight.renderers.default/",
+    "name": "insight.renderers.default",
+    "main": "./lib/pack-helper.js",
+    "directories": {
+        "lib": "./lib"
+    },
+    "label": "Default Insight Renderers",
+    "description": "Default JavaScript renderers for the Insight Intelligence Library",
     "mappings": {
-        "domplate": {
-            "id": "github.com/cadorn/domplate/"
+        "domplate": "./node_modules/domplate"
+    },
+    "dependencies": {
+        "domplate": "~0.2.0"
+    },
+    "exports": {
+        "images": {
+            "resources/images/*": "./resources/images/*"
         }
     }
 }
