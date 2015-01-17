@@ -17,5 +17,10 @@
         "images": {
             "resources/images/*": "./resources/images/*"
         }
+    },
+    "config": {
+        "pio.deploy.converter": {
+            "name": "nodejs-lib"
+        }
     }
 }
