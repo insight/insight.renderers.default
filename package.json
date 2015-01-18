@@ -1,27 +1,27 @@
 {
-    "uid": "https://github.com/insight/insight.renderers.default/",
-    "name": "insight.renderers.default",
-    "main": "./lib/pack-helper.js",
-    "version": "0.0.0",
-    "directories": {
-        "lib": "./lib"
-    },
-    "label": "Default Insight Renderers",
-    "description": "Default JavaScript renderers for the Insight Intelligence Library",
-    "mappings": {
-        "domplate": "./node_modules/domplate"
-    },
-    "dependencies": {
-        "domplate": "0.2.x"
-    },
-    "exports": {
-        "images": {
-            "resources/images/*": "./resources/images/*"
-        }
-    },
-    "config": {
-        "pio.deploy.converter": {
-            "name": "nodejs-lib"
-        }
+  "uid": "https://github.com/insight/insight.renderers.default/",
+  "name": "insight.renderers.default",
+  "main": "./lib/pack-helper.js",
+  "version": "0.0.1",
+  "directories": {
+    "lib": "./lib"
+  },
+  "label": "Default Insight Renderers",
+  "description": "Default JavaScript renderers for the Insight Intelligence Library",
+  "mappings": {
+    "domplate": "./node_modules/domplate"
+  },
+  "dependencies": {
+    "domplate": "0.2.x"
+  },
+  "exports": {
+    "images": {
+      "resources/images/*": "./resources/images/*"
     }
+  },
+  "config": {
+    "pio.deploy.converter": {
+      "name": "nodejs-lib"
+    }
+  }
 }
