@@ -1,0 +1,215 @@
+
+
+
+/*######################################################################
+#   @anchor layer
+#####################################################################*/
+
+DIV.__NS__layer {
+    position: relative;
+    display: block;
+    width: 100%;
+    border-left: 7px solid #4A7373;
+}
+
+DIV.__NS__layer-header {
+    position: relative;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #dfdfdf;
+    border-top: 1px solid #4A7373;
+    border-bottom: 5px solid #4A7373;
+}
+
+
+DIV.__NS__layer-title {
+    position: absolute;
+    display: inline-block;
+    top: 5px;
+    left: 15px;
+    font-weight: bold;
+    font-size: 120%;
+    color: #4A7373;
+}
+
+DIV.__NS__layer-actions {
+    position: relative;
+    display: inline-block;
+    margin-top: 25px;
+    width: 45%;
+    margin-left: 5px;
+    margin-right: 20px;
+    padding: 0px;
+    height: 100%;
+    box-sizing: border-box;
+    margin-bottom: 4px;
+}
+
+DIV.__NS__layer-action {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1px;
+    border: 1px solid black;
+    background-color: #acacac;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 110%;
+    border-radius: 3px;
+}
+DIV.__NS__layer-action:hover {
+	background-color: #DAC812;
+	cursor: pointer;
+}
+DIV.__NS__layer-action-disabled {
+    color: #848484;
+    border: 1px solid #848484;
+}
+DIV.__NS__layer-action-disabled:hover {
+    background-color: #ff0000;
+    cursor: not-allowed;
+}
+A.__NS__layer-action-docs-link {
+    position: relative;
+    display: inline-block;
+    float: right;
+}
+
+DIV.__NS__layer-snapshot {
+    position: relative;
+    display: inline-block;
+    top: 0px;
+    width: 50%;
+    padding: 0px;
+    background-color: #efefef;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+DIV.__NS__layer-sublayers {
+    position: relative;
+    display: block;
+    padding-left: 35px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #4A7373;
+}
+
+DIV.__NS__layer-console {
+    position: relative;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 5px solid #4A7373;
+    border-bottom: 1px solid #4A7373;
+    background-color: #4A7373;
+}
+
+
+/*######################################################################
+#   @anchor request
+#####################################################################*/
+
+DIV.__NS__request {
+    position: relative;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #4A7373;
+    background-color: #4A7373;
+    margin-bottom: 5px;
+}
+
+DIV.__NS__request-header {
+    position: relative;
+    display: block;
+    width: 100%;
+    background-color: #dfdfdf;
+    font-weight: bold;
+    padding: 0px;
+}
+DIV.__NS__request-header:hover {
+    cursor: pointer;
+}
+
+DIV.__NS__request-status {
+    position: relative;
+    display: inline-block;
+    background-color: #dfdfdf;
+    font-weight: bold;
+    height: 100%;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 50px;
+}
+DIV.__NS__request-status-error {
+    background-color: #CB4040;
+    color: #610101;
+}
+DIV.__NS__request-status-success {
+    background-color: #59CB40;
+    color: #016114;
+}
+
+DIV.__NS__request-uri {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+DIV.__NS__request-details {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-top: 5px;
+}
+
+DIV.__NS__request-details-hidden {
+    display: none;    
+}
+
+DIV.__NS__request-details-request {
+    position: relative;
+    display: inline-block;
+    width: 45%;
+    height: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #ffffff;
+}
+
+DIV.__NS__request-details-response {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    width: 50%;
+    padding: 5px;
+    top: 0px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+
+
+/*######################################################################
+#   wrappers/viewer
+#####################################################################*/
+
+DIV.__NS__viewer-harness {
+    padding: 2px 4px 1px 6px;
+    font-family: Lucida Grande, Tahoma, sans-serif;
+    font-size: 11px;
+}
+
