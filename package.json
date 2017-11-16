@@ -13,7 +13,7 @@
         "domplate": "./node_modules/domplate"
     },
     "dependencies": {
-        "domplate": "0.2.x"
+        "domplate": "^0.2.1"
     },
     "exports": {
         "images": {
