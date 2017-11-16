@@ -3,7 +3,9 @@
     "name": "insight.renderers.default",
     "main": "./lib/pack-helper.js",
     "version": "0.0.2",
-    "private": true,
+    "pm": {
+        "publish": "npm"
+    },
     "directories": {
         "lib": "./lib"
     },
