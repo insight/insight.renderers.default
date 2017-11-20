@@ -2,7 +2,7 @@
     "uid": "https://github.com/insight/insight.renderers.default/",
     "name": "insight.renderers.default",
     "main": "./lib/pack-helper.js",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "pm": {
         "publish": "npm"
     },
